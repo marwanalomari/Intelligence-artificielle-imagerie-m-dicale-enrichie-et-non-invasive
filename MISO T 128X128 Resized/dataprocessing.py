@@ -30,12 +30,12 @@ data_path.extend(file_path_t1ce)
 data_path.extend(file_path_t2)
 print(len(data_path))
 random.seed(10)
-split_n=random.sample(range(1050),150)
+split_n=random.sample(range(1425),225)
 
 test_path=[data_path[i] for i in split_n]
 train_path=list(set(data_path)-set(test_path))
 
-split_n=random.sample(range(900),450)
+split_n=random.sample(range(1200),600)
 gan_path=[train_path[i] for i in split_n]
 train_path=list(set(train_path)-set(gan_path))
 
