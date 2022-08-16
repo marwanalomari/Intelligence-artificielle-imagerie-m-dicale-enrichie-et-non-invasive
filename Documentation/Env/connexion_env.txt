@@ -1,0 +1,254 @@
+malomari@SIC08005:~$ cond --version
+
+La commande « cond » n'a pas été trouvée, voulez-vous dire :
+
+  commande « cons » du deb cons (2.3.0.1+2.2.0-2)
+
+Essayez : apt install <nom du deb>
+
+malomari@SIC08005:~$ conda --version
+ERROR: The install method you used for conda--probably either `pip install conda`
+or `easy_install conda`--is not compatible with using conda as an application.
+If your intention is to install conda as a standalone application, currently
+supported install methods include the Anaconda installer and the miniconda
+installer.  You can download the miniconda installer from
+https://conda.io/miniconda.html.
+
+malomari@SIC08005:~$ conda create -n marwan
+ERROR: The install method you used for conda--probably either `pip install conda`
+or `easy_install conda`--is not compatible with using conda as an application.
+If your intention is to install conda as a standalone application, currently
+supported install methods include the Anaconda installer and the miniconda
+installer.  You can download the miniconda installer from
+https://conda.io/miniconda.html.
+
+malomari@SIC08005:~$ pip --version
+pip 22.0.4 from /home/SIC/malomari/.local/lib/python3.8/site-packages/pip (python 3.8)
+malomari@SIC08005:~$ pip -v
+
+Usage:   
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  cache                       Inspect and manage pip's wheel cache.
+  index                       Inspect information available from package indexes.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  debug                       Show information useful for debugging.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --debug                     Let unhandled exceptions propagate outside the main subroutine, instead of logging them to stderr.
+  --isolated                  Run pip in an isolated mode, ignoring environment variables and user configuration.
+  --require-virtualenv        Allow pip to only run in a virtual environment; exit with an error otherwise.
+  -v, --verbose               Give more output. Option is additive, and can be used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be used up to 3 times (corresponding to WARNING, ERROR, and
+                              CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --no-input                  Disable prompting for input.
+  --proxy <proxy>             Specify a proxy in the form [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists: (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host or host:port pair as trusted, even though it does not have valid or any HTTPS.
+  --cert <path>               Path to PEM-encoded CA certificate bundle. If provided, overrides the default. See 'SSL Certificate
+                              Verification' in pip documentation for more information.
+  --client-cert <path>        Path to SSL client certificate, a single file containing the private key and the certificate in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine whether a new version of pip is available for download. Implied
+                              with --no-index.
+  --no-color                  Suppress colored output.
+  --no-python-version-warning
+                              Silence deprecation warnings for upcoming unsupported Pythons.
+  --use-feature <feature>     Enable new functionality, that may be backward incompatible.
+  --use-deprecated <feature>  Enable deprecated functionality, that will be removed in the future.
+malomari@SIC08005:~$ pip -V
+pip 22.0.4 from /home/SIC/malomari/.local/lib/python3.8/site-packages/pip (python 3.8)
+malomari@SIC08005:~$ pip3 -V
+pip 22.0.4 from /home/SIC/malomari/.local/lib/python3.8/site-packages/pip (python 3.8)
+malomari@SIC08005:~$ python3 pip -V
+python3: can't open file 'pip': [Errno 2] No such file or directory
+malomari@SIC08005:~$ python3 -V
+Python 3.8.10
+malomari@SIC08005:~$ python3 pip3 -V
+python3: can't open file 'pip3': [Errno 2] No such file or directory
+malomari@SIC08005:~$ python3 pip
+python3: can't open file 'pip': [Errno 2] No such file or directory
+malomari@SIC08005:~$ virtualenv
+usage: virtualenv [--version] [--with-traceback] [-v | -q] [--app-data APP_DATA] [--clear-app-data] [--discovery {builtin}] [-p py] [--creator {builtin,cpython3-posix,venv}] [--seeder {app-data,pip}] [--no-seed]
+                  [--activators comma_sep_list] [--clear] [--system-site-packages] [--symlinks | --copies] [--download | --no-download] [--extra-search-dir d [d ...]] [--pip version] [--setuptools version] [--wheel version] [--no-pip]
+                  [--no-setuptools] [--no-wheel] [--symlink-app-data] [--prompt prompt] [-h]
+                  dest
+virtualenv: error: the following arguments are required: dest
+malomari@SIC08005:~$ virtualenv marwan
+created virtual environment CPython3.8.10.final.0-64 in 227ms
+  creator CPython3Posix(dest=/home/SIC/malomari/marwan, clear=False, global=False)
+  seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, pkg_resources=latest, via=copy, app_data_dir=/home/SIC/malomari/.local/share/virtualenv/seed-app-data/v1.0.1.debian.1)
+  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+malomari@SIC08005:~$ python -V
+Python 2.7.18
+malomari@SIC08005:~$ source marwan/bin/activate
+(marwan) malomari@SIC08005:~$ python3 -V
+Python 3.8.10
+(marwan) malomari@SIC08005:~$ virtualenv -V
+usage: virtualenv [--version] [--with-traceback] [-v | -q] [--app-data APP_DATA] [--clear-app-data] [--discovery {builtin}] [-p py] [--creator {builtin,cpython3-posix,venv}] [--seeder {app-data,pip}] [--no-seed]
+                  [--activators comma_sep_list] [--clear] [--system-site-packages] [--symlinks | --copies] [--download | --no-download] [--extra-search-dir d [d ...]] [--pip version] [--setuptools version] [--wheel version] [--no-pip]
+                  [--no-setuptools] [--no-wheel] [--symlink-app-data] [--prompt prompt] [-h]
+                  dest
+virtualenv: error: the following arguments are required: dest
+(marwan) malomari@SIC08005:~$ virtualenv diaa --python=2.7
+created virtual environment CPython2.7.18.final.0-64 in 495ms
+  creator CPython2Posix(dest=/home/SIC/malomari/diaa, clear=False, global=False)
+  seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, pkg_resources=latest, via=copy, app_data_dir=/home/SIC/malomari/.local/share/virtualenv/seed-app-data/v1.0.1.debian.1)
+  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator
+(marwan) malomari@SIC08005:~$ source diaa/bin/activate
+(diaa) malomari@SIC08005:~$ python -V
+Python 2.7.18
+(diaa) malomari@SIC08005:~$ source marwan/bin/activate
+(marwan) malomari@SIC08005:~$ python3 -V
+Python 3.8.10
+(marwan) malomari@SIC08005:~$ pip -V
+pip 20.0.2 from /home/SIC/malomari/marwan/lib/python3.8/site-packages/pip (python 3.8)
+(marwan) malomari@SIC08005:~$ source diaa/bin/activate
+(diaa) malomari@SIC08005:~$ pip -V
+pip 20.0.2 from /home/SIC/malomari/diaa/lib/python2.7/site-packages/pip (python 2.7)
+(diaa) malomari@SIC08005:~$ source marwan/bin/activate
+(marwan) malomari@SIC08005:~$ pip -V
+pip 20.0.2 from /home/SIC/malomari/marwan/lib/python3.8/site-packages/pip (python 3.8)
+(marwan) malomari@SIC08005:~$ pip list
+Package           Version
+----------------- -------
+asttokens         2.0.5  
+backcall          0.2.0  
+debugpy           1.6.0  
+decorator         5.1.1  
+entrypoints       0.4    
+executing         0.8.3  
+ipykernel         6.13.0 
+ipython           8.3.0  
+jedi              0.18.1 
+jupyter-client    7.3.1  
+jupyter-core      4.10.0 
+matplotlib-inline 0.1.3  
+nest-asyncio      1.5.5  
+packaging         21.3   
+parso             0.8.3  
+pexpect           4.8.0  
+pickleshare       0.7.5  
+pip               20.0.2 
+pkg-resources     0.0.0  
+prompt-toolkit    3.0.29 
+psutil            5.9.0  
+ptyprocess        0.7.0  
+pure-eval         0.2.2  
+Pygments          2.12.0 
+pyparsing         3.0.9  
+python-dateutil   2.8.2  
+pyzmq             22.3.0 
+setuptools        44.0.0 
+six               1.16.0 
+stack-data        0.2.0  
+tornado           6.1    
+traitlets         5.2.0  
+wcwidth           0.2.5  
+wheel             0.34.2 
+(marwan) malomari@SIC08005:~$ pip list > ./packages_and_versions
+(marwan) malomari@SIC08005:~$ ls
+ BACKUP             diaa                        GANs_Prototype.ipynb   loss.py    norm_intens_crop.py     __pycache__         utils.py
+ brats18_dataset    gan_bw.png                  glips_bw.png           marwan     output.png              sample2.png         weight
+ dataset_brain.py  'GANs_Prototype Aug.ipynb'   loss_gan.txt           model.py   packages_and_versions   subplot_image.png
+(marwan) malomari@SIC08005:~$ cat packages_and_versions 
+Package           Version
+----------------- -------
+asttokens         2.0.5  
+backcall          0.2.0  
+debugpy           1.6.0  
+decorator         5.1.1  
+entrypoints       0.4    
+executing         0.8.3  
+ipykernel         6.13.0 
+ipython           8.3.0  
+jedi              0.18.1 
+jupyter-client    7.3.1  
+jupyter-core      4.10.0 
+matplotlib-inline 0.1.3  
+nest-asyncio      1.5.5  
+packaging         21.3   
+parso             0.8.3  
+pexpect           4.8.0  
+pickleshare       0.7.5  
+pip               20.0.2 
+pkg-resources     0.0.0  
+prompt-toolkit    3.0.29 
+psutil            5.9.0  
+ptyprocess        0.7.0  
+pure-eval         0.2.2  
+Pygments          2.12.0 
+pyparsing         3.0.9  
+python-dateutil   2.8.2  
+pyzmq             22.3.0 
+setuptools        44.0.0 
+six               1.16.0 
+stack-data        0.2.0  
+tornado           6.1    
+traitlets         5.2.0  
+wcwidth           0.2.5  
+wheel             0.34.2 
+(marwan) malomari@SIC08005:~$ ls
+ BACKUP             diaa                        GANs_Prototype.ipynb   loss.py    norm_intens_crop.py     __pycache__         utils.py
+ brats18_dataset    gan_bw.png                  glips_bw.png           marwan     output.png              sample2.png         weight
+ dataset_brain.py  'GANs_Prototype Aug.ipynb'   loss_gan.txt           model.py   packages_and_versions   subplot_image.png
+(marwan) malomari@SIC08005:~$ pwd
+/home/SIC/malomari
+(marwan) malomari@SIC08005:~$ pip install -r packages_and_versions.txt
+ERROR: Invalid requirement: 'Package           Version' (from line 1 of packages_and_versions.txt)
+(marwan) malomari@SIC08005:~$ pip install -r packages_and_versions.txt
+Requirement already satisfied: asttokens==2.0.5 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 1)) (2.0.5)
+Requirement already satisfied: backcall==0.2.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 2)) (0.2.0)
+Requirement already satisfied: debugpy==1.6.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 3)) (1.6.0)
+Requirement already satisfied: decorator==5.1.1 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 4)) (5.1.1)
+Requirement already satisfied: entrypoints==0.4 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 5)) (0.4)
+Requirement already satisfied: executing==0.8.3 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 6)) (0.8.3)
+Requirement already satisfied: ipykernel==6.13.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 7)) (6.13.0)
+Requirement already satisfied: ipython==8.3.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 8)) (8.3.0)
+Requirement already satisfied: jedi==0.18.1 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 9)) (0.18.1)
+Requirement already satisfied: jupyter-client==7.3.1 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 10)) (7.3.1)
+Requirement already satisfied: jupyter-core==4.10.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 11)) (4.10.0)
+Requirement already satisfied: matplotlib-inline==0.1.3 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 12)) (0.1.3)
+Requirement already satisfied: nest-asyncio==1.5.5 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 13)) (1.5.5)
+Requirement already satisfied: packaging==21.3 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 14)) (21.3)
+Requirement already satisfied: parso==0.8.3 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 15)) (0.8.3)
+Requirement already satisfied: pexpect==4.8.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 16)) (4.8.0)
+Requirement already satisfied: pickleshare==0.7.5 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 17)) (0.7.5)
+Requirement already satisfied: pip==20.0.2 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 18)) (20.0.2)
+Requirement already satisfied: pkg-resources==0.0.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 19)) (0.0.0)
+Requirement already satisfied: prompt-toolkit==3.0.29 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 20)) (3.0.29)
+Requirement already satisfied: psutil==5.9.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 21)) (5.9.0)
+Requirement already satisfied: ptyprocess==0.7.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 22)) (0.7.0)
+Requirement already satisfied: pure-eval==0.2.2 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 23)) (0.2.2)
+Requirement already satisfied: Pygments==2.12.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 24)) (2.12.0)
+Requirement already satisfied: pyparsing==3.0.9 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 25)) (3.0.9)
+Requirement already satisfied: python-dateutil==2.8.2 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 26)) (2.8.2)
+Requirement already satisfied: pyzmq==22.3.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 27)) (22.3.0)
+Requirement already satisfied: setuptools==44.0.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 28)) (44.0.0)
+Requirement already satisfied: six==1.16.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 29)) (1.16.0)
+Requirement already satisfied: stack-data==0.2.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 30)) (0.2.0)
+Requirement already satisfied: tornado==6.1 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 31)) (6.1)
+Requirement already satisfied: traitlets==5.2.0 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 32)) (5.2.0)
+Requirement already satisfied: wcwidth==0.2.5 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 33)) (0.2.5)
+Requirement already satisfied: wheel==0.34.2 in ./marwan/lib/python3.8/site-packages (from -r packages_and_versions.txt (line 34)) (0.34.2)
+(marwan) malomari@SIC08005:~$ 
