@@ -13,7 +13,7 @@ import torch.nn.functional as F
 import torch.nn as nn
 from torch.nn import init
 from torch.utils import data
-from dataset_brain import Dataset_gan
+from dataset_brain import Dataset_gan_F
 from loss import dice_loss,dice_score
 from model import netD, define_G, Unet
 from utils import label2onehot,classification_loss,gradient_penalty,seed_torch,update_lr
