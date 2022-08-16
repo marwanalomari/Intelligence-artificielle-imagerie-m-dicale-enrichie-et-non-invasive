@@ -1,0 +1,1 @@
+Put both /HGG and /LGG of BRATS2018 to this path folder /train
